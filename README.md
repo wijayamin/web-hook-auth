@@ -15,10 +15,7 @@ Getting Started
 
 ```bash
 # Clone the repo
-git clone https://github.com/hasura/graphql-engine
-
-# Change directory
-cd graphql-engine/community/boilerplates/auth-webhooks/passport-js
+git clone https://github.com/mientz/web-hook-auth.git
 
 # Install NPM dependencies
 npm install
@@ -90,4 +87,3 @@ The client just need to add `Authorization: Bearer <token>` to the request sendi
 
 The endpoint (say `http://localhost:8080/webhook`) can be given as an environment variable `HASURA_GRAPHQL_AUTH_HOOK` to GraphQL Engine.
 
-[Read more about webhook here](https://docs.hasura.io/1.0/graphql/manual/auth/authentication/webhook.html).
