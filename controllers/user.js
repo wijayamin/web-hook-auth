@@ -63,8 +63,9 @@ exports.postSignup = async (req, res, next) => {
 
 exports.getWebhook = async (req, res, next) => {
   passport.authenticate('bearer', (err, user, info) => {
-    if (err) { return handleResponse(res, 401, {'error': err}); }
-    if (user) {
+    if (err) { 
+      handleResponse(res, 200, {'X-Hasura-Role': 'anonymous'});
+    }else if (user) {
       handleResponse(res, 200, {
         'X-Hasura-Role': `${user.role}`,
         'X-Hasura-User-Id': `${user.id}`

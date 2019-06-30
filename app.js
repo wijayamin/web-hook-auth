@@ -3,6 +3,7 @@
  */
 
 const express = require('express');
+var cors = require('cors')
 const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const dotenv = require('dotenv');
@@ -30,6 +31,7 @@ const app = express();
 app.set('host', '0.0.0.0');
 app.set('port', process.env.PORT || 8083);
 app.set('json spaces', 2); // number of spaces for indentation
+app.use(cors())
 app.use(bodyParser.json());
 app.use(expressValidator());
 app.use(passport.initialize());

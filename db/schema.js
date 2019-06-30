@@ -23,6 +23,7 @@ class User extends Model {
     return {
       'id': this.id,
       'email': this.email,
+      'role': this.role,
       'token': this.token
     }
   }
