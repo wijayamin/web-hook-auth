@@ -27,7 +27,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-validator": "^5.3.0",
     "knex": "^0.19.5",
     "objection": "^2.2.16",
